@@ -1,6 +1,8 @@
-function Card(props) {
+function Card() {
   return (
-    <div>
+    <div className="wrapper">
+      <button className="carousel-control "></button>
+      <button className="carousel-control "></button>
     </div>
   );
 }
