@@ -1,15 +1,15 @@
 import styles from './header.module.css';
 
-function Header() {
+const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.wrapper}>
         <div className={styles['inner-left']}>
-          <img src="./assets/img/logo.png" alt="logo" className={styles.logo} />
-          <span className={styles['logo-text']}>Словарик</span>
+          <img src="src\assets\img\speech-svgrepo-com.svg" alt="logo" className={styles.logo} />
+          <span className={styles['logo-text']}>Dictionary</span>
         </div>
 
-        <div className={styles['inner-center']}>
+        <div>
           <nav className={styles.navbar}>
             <ul className={styles.navbar__items}>
               <li className={styles.navbar__item}>

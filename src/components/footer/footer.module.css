@@ -1,0 +1,15 @@
+.footer {
+  height: 142px;
+  /* padding: 80px 0 80px 0; */
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.text {
+  font-size: 1em;
+  margin-bottom: 0;
+  padding: 48px 0;
+  text-align: center;
+}

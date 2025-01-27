@@ -1,12 +1,15 @@
 // import Card from './components/card/Card';
-// import React from 'react';
+import styles from './main.module.css';
 
-// function Main() {
-//   return (
-//     <React.Fragment>
-//       <Card />
-//     </React.Fragment>
-//   );
-// }
+const Main = () => {
+  return (
+    <>
+      <section className={styles['parallax-section']}>
+      </section>
 
-// export default Main
+      <section className={styles['static-section']}></section>
+    </>
+  );
+}
+
+export default Main
