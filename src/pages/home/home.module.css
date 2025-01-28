@@ -1,0 +1,28 @@
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+  /* вместо top,
+  bottom,
+  left,
+  right: 0;*/
+}
+
+.parallax-image {
+  transform: translateZ(0);
+}
+
+.parallax-text {
+  transform: translateZ(-2px);
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

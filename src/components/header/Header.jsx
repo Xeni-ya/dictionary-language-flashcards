@@ -3,28 +3,30 @@ import styles from './header.module.css';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.wrapper}>
-        <div className={styles['inner-left']}>
-          <img src="src\assets\img\speech-svgrepo-com.svg" alt="logo" className={styles.logo} />
+
+      <div className={styles.header__wrapper}>
+
+        <div className={styles.header__inner}>
+          <img src="src\assets\img\logo.svg" alt="logo" className={styles.logo} />
           <span className={styles['logo-text']}>Dictionary</span>
         </div>
 
-        <div>
-          <nav className={styles.navbar}>
-            <ul className={styles.navbar__items}>
-              <li className={styles.navbar__item}>
-                Главная
-              </li>
-              <li className={styles.navbar__item}>
-                Карточки
-              </li>
-              <li className={styles.navbar__item}>
-                Словарь
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav className={styles.navbar}>
+          <ul className={styles.navbar__items}>
+            <li className={styles.navbar__item}>
+              <a href="#" className={styles.navbar__link}>Главная</a>
+            </li>
+            <li className={styles.navbar__item}>
+              <a href="#" className={styles.navbar__link}>Карточки</a>
+            </li>
+            <li className={styles.navbar__item}>
+              <a href="#" className={styles.navbar__link}>Словарь</a>
+            </li>
+          </ul>
+        </nav>
+
       </div>
+
     </header>
   );
 }

@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.wrapper {
+.header__wrapper {
   display: flex;
   max-width: 1320px;
   width: 100%;
@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 
-.inner-left {
+.header__inner {
   display: flex;
   align-items: center;
 }
@@ -51,4 +51,34 @@
   font-size: 1.1875em;
   padding: 16px;
   list-style-type: none;
+}
+
+.navbar__link {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  position: relative;
+}
+
+.navbar__link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar__link:hover::before,
+.navbar__link.active::before {
+  background-color: #54a630;
+  /* Цвет полоски при наведении или активном состоянии */
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  color: #54a630;
+  /* Цвет текста при наведении или активном состоянии */
 }
