@@ -1,4 +1,3 @@
-// import Card from './components/card/Card.jsx';
 import styles from './dictionary.module.css';
 
 const words = [
@@ -24,33 +23,36 @@ const words = [
 const Dictionary = () => {
   return (
     <>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>Слово</th>
-            <th>Транскрипция</th>
-            <th>Перевод</th>
-            <th>Категория</th>
-            <th>Действия</th>
-          </tr>
-        </thead>
-        <tbody>
-          {words.map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{item.english}</td>
-                <td>{item.transcription}</td>
-                <td>{item.russian}</td>
-                <td>{item.tags}</td>
-                <td>
-                  <button>Редактировать</button>
-                  <button>Удалить</button>
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <div className={styles.container}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Слово</th>
+              <th>Транскрипция</th>
+              <th>Перевод</th>
+              <th>Тег</th>
+              <th>Действия</th>
+            </tr>
+          </thead>
+          <tbody>
+            {words.map((item, index) => {
+              return (
+                <tr key={index} id={item.id}>
+                  <td>{item.english}</td>
+                  <td>{item.transcription}</td>
+                  <td>{item.russian}</td>
+                  <td>{item.tags}</td>
+                  <td>
+                    <button className={styles.btn__edit}></button>
+                    <button className={styles.btn__delete}></button>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
+
     </>
   );
 }
