@@ -3,26 +3,30 @@ import styles from './card.module.css';
 import { useState } from 'react';
 
 function Card(props) {
-  const [showTranslation, setShowTranslation] = useState(false);
+  const [cheked, setCheked] = useState(false);
 
   const handleChekedState = () => {
-    setShowTranslation(!showTranslation);
+    setCheked(!cheked);
   };
 
   return (
     <div className={styles.wrapper} {...props}>
       <p>{props.word}</p>
-      <p>{props.translation}</p>
-      <button onClick={handleChekedState}>
-        {showTranslation ? 'Скрыть перевод' : 'Показать перевод'}
-      </button>
+      <p>{props.transcription}</p>
+      {cheked && <p>{props.translation}</p>}
+      {!cheked && (
+        <button onClick={handleChekedState} className={styles.button}>
+          Проверить
+        </button>
+      )}
     </div>
   );
 }
 
 Card.propTypes = {
   word: PropTypes.string,
+  transcription: PropTypes.string,
   translation: PropTypes.string,
 };
 
-export default Card
+export default Card;

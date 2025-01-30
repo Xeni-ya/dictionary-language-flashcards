@@ -31,7 +31,7 @@ const Dictionary = () => {
               <th>Транскрипция</th>
               <th>Перевод</th>
               <th>#Тег</th>
-              <th></th>
+              <th>Действия</th>
             </tr>
             <tr className={styles.adding__input}>
               <th><input type="text" /></th>
