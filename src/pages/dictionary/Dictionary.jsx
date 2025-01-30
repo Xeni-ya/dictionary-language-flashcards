@@ -26,12 +26,23 @@ const Dictionary = () => {
       <div className={styles.container}>
         <table className={styles.table}>
           <thead>
-            <tr>
+            <tr className={styles.table__header}>
               <th>Слово</th>
               <th>Транскрипция</th>
               <th>Перевод</th>
-              <th>Тег</th>
-              <th>Действия</th>
+              <th>#Тег</th>
+              <th></th>
+            </tr>
+            <tr className={styles.adding__input}>
+              <th><input type="text" /></th>
+              <th><input type="text" /></th>
+              <th><input type="text" /></th>
+              <th><input type="text" /></th>
+              <th className={styles.btn__action}>
+                <button className={styles.btn__action_edit}></button>
+                <button className={styles.btn__action_delete}></button>
+                <button className={styles.btn__action_save}>Сохранить</button>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -42,9 +53,9 @@ const Dictionary = () => {
                   <td>{item.transcription}</td>
                   <td>{item.russian}</td>
                   <td>{item.tags}</td>
-                  <td>
-                    <button className={styles.btn__edit}></button>
-                    <button className={styles.btn__delete}></button>
+                  <td className={styles.btn__action}>
+                    <button className={styles.btn__action_edit}></button>
+                    <button className={styles.btn__action_delete}></button>
                   </td>
                 </tr>
               )
