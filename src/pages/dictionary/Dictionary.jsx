@@ -21,6 +21,11 @@ const words = [
 ];
 
 const Dictionary = () => {
+
+  const [editingIndex, setEditingIndex] = useState();
+  const [editValues, setEditValues] = useState();
+
+
   return (
     <>
       <div className={styles.container}>
@@ -49,7 +54,16 @@ const Dictionary = () => {
             {words.map((item, index) => {
               return (
                 <tr key={index} id={item.id}>
-                  <td>{item.english}</td>
+                  <td>
+                    {editingIndex === index ? (
+                      <input
+                        type="text"
+                        name="english"
+                        value={editValues.english}
+                      />) : (
+                      item.english
+                    )}
+                  </td>
                   <td>{item.transcription}</td>
                   <td>{item.russian}</td>
                   <td>{item.tags}</td>
