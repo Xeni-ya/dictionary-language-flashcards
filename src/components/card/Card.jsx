@@ -10,16 +10,19 @@ function Card(props) {
   };
 
   return (
-    <div className={styles.wrapper} {...props}>
-      <p>{props.word}</p>
-      <p>{props.transcription}</p>
-      {cheked && <p>{props.translation}</p>}
-      {!cheked && (
-        <button onClick={handleChekedState} className={styles.button}>
-          Проверить
-        </button>
-      )}
+    <div className={styles.wrapper}>
+      <div className={styles['card-wrap']} {...props}>
+        <p>{props.word}</p>
+        <p>{props.transcription}</p>
+        {cheked && <p>{props.translation}</p>}
+        {!cheked && (
+          <button onClick={handleChekedState} className={styles.button}>
+            Проверить
+          </button>
+        )}
+      </div>
     </div>
+
   );
 }
 

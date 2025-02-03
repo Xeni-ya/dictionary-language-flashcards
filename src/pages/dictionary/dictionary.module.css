@@ -59,13 +59,28 @@ tbody td {
   background-size: cover;
 }
 
+.btn__action_edit:hover {
+  background: url('../../assets/img/edit-report-svgrepo-com.svg');
+  background-size: cover;
+}
+
 .btn__action_delete {
   background: url('../../assets/img/circle-cancel.svg');
   background-size: cover;
 }
 
+.btn__action_delete:hover {
+  background: url('../../assets/img/circle-cancel-svgrepo-com.svg');
+  background-size: cover;
+}
+
 .btn__action_save {
   background: url('../../assets/img/add.svg');
+  background-size: cover;
+}
+
+.btn__action_save:hover {
+  background: url('../../assets/img/add-1.svg');
   background-size: cover;
 }
 
