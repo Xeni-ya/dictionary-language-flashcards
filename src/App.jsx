@@ -6,8 +6,13 @@ import Home from './pages/home/Home';
 import Dictionary from './pages/dictionary/dictionary';
 import Card from './components/card/Card';
 import Missing from './components/missing/Missing';
+import { observer } from 'mobx-react';
+import { WordStoreContext } from './store/store';
+import { useContext } from 'react';
 
-function App() {
+const App = observer(() => {
+  const store = useContext(WordStoreContext)
+
   return (
     <Router>
       <div className="App">
@@ -16,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/cards" element={<Card />} />
-            <Route path="/dictionary" element={<Dictionary />} />
+            <Route path="/dictionary" element={<Dictionary store={store} />} />
             <Route path="*" element={<Missing />} />
           </Routes>
         </main>
@@ -24,6 +29,6 @@ function App() {
       </div>
     </Router>
   );
-}
+});
 
 export default App;
