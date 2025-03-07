@@ -1,8 +1,9 @@
 import styles from './dictionary.module.css';
 import { words } from './../dictionary/wordsList';
 import { useState } from 'react';
+import { observer } from 'mobx-react';
 
-const Dictionary = () => {
+const Dictionary = observer(() => {
 
   const [editingIndex, setEditingIndex] = useState();
   const [editValues, setEditValues] = useState({});
@@ -114,6 +115,6 @@ const Dictionary = () => {
 
     </>
   );
-}
+});
 
 export default Dictionary;
