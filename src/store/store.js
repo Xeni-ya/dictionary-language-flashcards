@@ -28,7 +28,20 @@ class WordStore {
   removeWord(id) {
     this.words = this.words.filter((word) => word.id !== id);
   }
+
+  updateWord(id, text, definition) {
+    const word = this.words.find((word) => word.id === id);
+    if (word) {
+      word.text = text;
+      word.definition = definition;
+    }
+  }
 }
+
+// получения слов
+// async fetchWords() {
+
+// }
 
 export const wordStore = new WordStore();
 export const WordStoreContext = createContext(wordStore);
