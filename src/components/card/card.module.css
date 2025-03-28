@@ -13,7 +13,7 @@
   justify-content: center;
   align-content: center;
 
-  background-color: #ffffff;
+  background-color: #f6fbf4;
   border-radius: 30px;
   padding: 16px;
   margin: 20vh 20px 30px 20px;
@@ -33,7 +33,7 @@
   font-family: 1.4em;
 }
 
-button {
+.button {
   border-radius: 40px;
   margin: 9.6px;
   padding: 20px 32px;
